@@ -1,0 +1,4 @@
+include_rules
+
+: foreach *.cpp |> !cc |> %B.o {objs}
+: {objs} |> !exe |>

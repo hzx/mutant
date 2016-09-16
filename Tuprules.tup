@@ -1,0 +1,8 @@
+CC = clang++
+OPT += -Wall -O2 -std=c++14
+
+!cc = |> $(CC) $(OPT) $(CFLAGS) -c %f -o %o |> %B.o
+!ccp = |> $(CC) $(OPT) $(CFLAGS) -fPIC -c %f -o %o |> %B.o
+!exe = |> $(CC) $(OPT) $(LFLAGS) $(RPATH) -o %o %f $(LIBS) |> %d
+!lib = |> $(CC) $(OPT) $(LFLAGS) $(RPATH) -shared -o %o %f $(LIBS) |> lib%d.so
+!ar = |> ar crs %o %f |> lib%d.a
