@@ -1,6 +1,10 @@
 CC = clang++
 OPT += -Wall -O2 -std=c++14
 
+CFLAGS += -I/usr/local/include
+
+LFLAGS += -L/usr/local/lib
+
 !cc = |> $(CC) $(OPT) $(CFLAGS) -c %f -o %o |> %B.o
 !ccp = |> $(CC) $(OPT) $(CFLAGS) -fPIC -c %f -o %o |> %B.o
 !exe = |> $(CC) $(OPT) $(LFLAGS) $(RPATH) -o %o %f $(LIBS) |> %d
