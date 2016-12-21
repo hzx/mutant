@@ -7,3 +7,14 @@ Mutant style language - object oriented style language, CSS preprocessed.
 - tup build system http://gittup.org/tup/
 - clang++ with c++14 support and above
 - googletest, googlemock libs for tests
+
+[Build]
+in the project root
+# create initial tup dirs
+$ tup init
+
+# choose debug build config
+$ tup variant configs/debug.config
+
+# build
+$ tup
