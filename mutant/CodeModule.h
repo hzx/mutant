@@ -2,10 +2,14 @@
 
 #include <string>
 #include <vector>
-#include "Import.h"
+
+#include "BaseModule.h"
+#include "nodes/Function.h"
+#include "nodes/Class.h"
 
 
-class CodeModule {
+class CodeModule: public BaseModule {
 public:
-  std::string name;
+  std::vector<nodes::Function> functions;
+  std::vector<nodes::Class> classes;
 };

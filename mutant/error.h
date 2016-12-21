@@ -14,7 +14,7 @@
  */
 
 
-ERROR_OK = 0;
+int const ERROR_OK = 0;
 
 
 /* 1000 - loader */

@@ -1,7 +1,11 @@
 #pragma once
 
+#include <string>
+#include <vector>
 
-class StyleModule {
+#include "BaseModule.h"
+
+
+class StyleModule: public BaseModule {
 public:
-private:
 };
