@@ -1,1 +1,9 @@
-Language for web development
+Mutant language - C-based, graph based parser, object oriented, templated,
+strongly typed.
+
+Mutant style language - object oriented style language, CSS preprocessed.
+
+[Dev tools/libs]
+- tup build system http://gittup.org/tup/
+- clang++ with c++14 support and above
+- googletest, googlemock libs for tests
