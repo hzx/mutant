@@ -4,5 +4,5 @@
 enum class ModuleType {
   NONE = 0,
   CODE,
-  STYLE
+  STYLE,
 };
