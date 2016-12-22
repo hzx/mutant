@@ -6,6 +6,6 @@ public:
 };
 
 
-TEST_F(CompileFunctionTest, noParamsTest) {
+TEST_F(CompileFunctionTest, noParams) {
   FAIL();
 }

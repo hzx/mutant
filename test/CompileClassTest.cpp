@@ -6,31 +6,31 @@ public:
 };
 
 
-TEST_F(CompileClassTest, simpleTest) {
+TEST_F(CompileClassTest, simple) {
   FAIL();
 }
 
 
-TEST_F(CompileClassTest, extendsTest) {
+TEST_F(CompileClassTest, extends) {
   FAIL();
 }
 
 
-TEST_F(CompileClassTest, implementTest) {
+TEST_F(CompileClassTest, implement) {
   FAIL();
 }
 
 
-TEST_F(CompileClassTest, implementMultiTest) {
+TEST_F(CompileClassTest, implementMulti) {
   FAIL();
 }
 
 
-TEST_F(CompileClassTest, extendsImplementTest) {
+TEST_F(CompileClassTest, extendsImplement) {
   FAIL();
 }
 
 
-TEST_F(CompileClassTest, extendsImplementMultiTest) {
+TEST_F(CompileClassTest, extendsImplementMulti) {
   FAIL();
 }

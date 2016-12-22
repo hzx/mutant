@@ -6,6 +6,6 @@ public:
 };
 
 
-TEST_F(CompileVariableTest, declarationTest) {
+TEST_F(CompileVariableTest, declaration) {
   FAIL();
 }
