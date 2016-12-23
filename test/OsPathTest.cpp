@@ -34,3 +34,43 @@ TEST(OsPathTest, joinTwo) {
 
   ASSERT_EQ(expected, actual);
 }
+
+
+TEST(OsPathTest, joinLeftRight) {
+  std::string expected = "/www/foo/osd/ui";
+  std::string actual = OsPath::join("/www/foo", "osd/ui");
+
+  ASSERT_EQ(expected, actual);
+}
+
+
+TEST(OsPathTest, joinLeftSlashRight) {
+  std::string expected = "/www/foo/osd/ui";
+  std::string actual = OsPath::join("/www/foo/", "osd/ui");
+
+  ASSERT_EQ(expected, actual);
+}
+
+
+TEST(OsPathTest, joinLeftEmptyRight) {
+  std::string expected = "";
+  std::string actual = OsPath::join("", "osd/ui");
+
+  ASSERT_EQ(expected, actual);
+}
+
+
+TEST(OsPathTest, joinLeftRightEmpty) {
+  std::string expected = "";
+  std::string actual = OsPath::join("/www/foo", "");
+
+  ASSERT_EQ(expected, actual);
+}
+
+
+TEST(OsPathTest, joinLeftEmptyRightEmpty) {
+  std::string expected = "";
+  std::string actual = OsPath::join("", "");
+
+  ASSERT_EQ(expected, actual);
+}
