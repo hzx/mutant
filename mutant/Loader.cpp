@@ -26,7 +26,7 @@ std::string Loader::findModulePath(std::vector<std::string> const& names) {
   std::string module = OsPath::join(names);
 
   std::find_if(project->repositories.begin(), project->repositories.end(),
-    [&](std::string const& repository) {
+    [&module](std::string const& repository) {
       std::string full = OsPath::join(repository, module);
 
       return !full.empty() && OsPath::exists(full);
