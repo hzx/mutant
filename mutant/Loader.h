@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 
+#include "Project.h"
 #include "ModuleType.h"
 #include "CodeModule.h"
 #include "StyleModule.h"
@@ -21,4 +22,6 @@ public:
   // *.mus - for STYLE module
   // mixed files inside of one path is forbidden
   ModuleType detectModuleType(std::string const& path);
+
+  Project* project = nullptr;
 };
