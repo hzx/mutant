@@ -14,9 +14,9 @@ public:
   // load module files, return error
   int loadCodeModule(CodeModule& module, std::string const& path);
   int loadStyleModule(StyleModule& module, std::string const& path);
-  // return module path
+  // return module paths
   // names - absolute module name
-  std::string findModulePath(std::vector<std::string> const& names);
+  std::vector<std::string>&& findModulePaths(std::vector<std::string> const& names);
   // detect module type by searching files in path with filtered extensions,
   // *.mut - for CODE module
   // *.mus - for STYLE module
