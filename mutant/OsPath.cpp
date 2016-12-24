@@ -1,10 +1,12 @@
 #include "OsPath.h"
 
 #include <unistd.h>
+#include <sys/stat.h>
 #include <dirent.h>
 #include <stdlib.h>
 
 #include <sstream>
+#include <fstream>
 #include <algorithm>
 #include <iterator>
 
@@ -39,8 +41,19 @@ std::string OsPath::join(std::string const& left, std::string const& right) {
 
 
 bool OsPath::exists(std::string const& path) {
-  DIR* dir = opendir(path.c_str());
-  bool exists = dir != nullptr;
-  if (dir) closedir(dir);
-  return exists;
+  return access(path.data(), F_OK) == 0;
+}
+
+
+bool OsPath::isFile(std::string const& path) {
+  struct stat st;
+  if (stat(path.data(), &st) != 0) return false; // error or not exists
+  return (st.st_mode & S_IFREG) != 0; // is regular file
+}
+
+
+bool OsPath::isDir(std::string const& path) {
+  struct stat st;
+  if (stat(path.data(), &st) != 0) return false; // error or not exists
+  return (st.st_mode & S_IFDIR) != 0; // is directory
 }
