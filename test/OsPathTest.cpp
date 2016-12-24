@@ -74,3 +74,10 @@ TEST(OsPathTest, joinLeftEmptyRightEmpty) {
 
   ASSERT_EQ(expected, actual);
 }
+
+
+TEST(OsPathTest, existsDir) {
+  std::string existedDir = "../../test_data/OsPathExistsDir";
+
+  ASSERT_TRUE(OsPath::exists(existedDir));
+}
