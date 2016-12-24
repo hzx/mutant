@@ -1,5 +1,5 @@
 include_rules
 
-: foreach *.cpp |> !cc |> %B.o {objs}
+: foreach *.cpp |> !ccp |> %B.o {objs}
 : {objs} |> !lib |>
 : {objs} |> !exe |>
