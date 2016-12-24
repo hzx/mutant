@@ -81,3 +81,10 @@ TEST(OsPathTest, existsDir) {
 
   ASSERT_TRUE(OsPath::exists(existedDir));
 }
+
+
+TEST(OsPathTest, existsDirOnFile) {
+  std::string existedFile = "../../test_data/OsPathExistsFile";
+
+  ASSERT_FALSE(OsPath::exists(existedFile));
+}
