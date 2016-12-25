@@ -3,6 +3,8 @@
 #include <string>
 #include <vector>
 
+#include "File.h"
+
 
 class OsPath {
 public:
@@ -11,4 +13,6 @@ public:
   static bool exists(std::string const& path);
   static bool isFile(std::string const& path);
   static bool isDir(std::string const& path);
+  // return path list of filenames (dirs, links, files, ...)
+  static std::vector<std::string>&& ls(std::string const& path);
 };

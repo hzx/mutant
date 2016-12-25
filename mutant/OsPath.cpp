@@ -57,3 +57,21 @@ bool OsPath::isDir(std::string const& path) {
   if (stat(path.data(), &st) != 0) return false; // error or not exists
   return (st.st_mode & S_IFDIR) != 0; // is directory
 }
+
+
+std::vector<std::string>&& OsPath::ls(std::string const& path) {
+  std::vector<std::string> names;
+
+  DIR* dir = opendir(path.data());
+  if (dir == nullptr) return std::move(names);
+
+  struct dirent* cur;
+
+  while ((cur = readdir(dir)) != nullptr) {
+    names.push_back(cur->d_name);
+  }
+
+  closedir(dir);
+
+  return std::move(names);
+}
