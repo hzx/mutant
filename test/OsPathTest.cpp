@@ -77,28 +77,28 @@ TEST(OsPathTest, joinLeftEmptyRightEmpty) {
 
 
 TEST(OsPathTest, existsFile) {
-  std::string existedFile = "../../test_data/OsPathExistsFile";
+  std::string existedFile = "../../test_data/OsPath/file";
 
   ASSERT_TRUE(OsPath::exists(existedFile));
 }
 
 
 TEST(OsPathTest, existsDir) {
-  std::string existedDir = "../../test_data/OsPathExistsDir";
+  std::string existedDir = "../../test_data/OsPath/dir";
 
   ASSERT_TRUE(OsPath::exists(existedDir));
 }
 
 
 TEST(OsPathTest, isDir) {
-  std::string existedDir = "../../test_data/OsPathExistsDir";
+  std::string existedDir = "../../test_data/OsPath/dir";
 
   ASSERT_TRUE(OsPath::isDir(existedDir));
 }
 
 
 TEST(OsPathTest, isFile) {
-  std::string existedFile = "../../test_data/OsPathExistsFile";
+  std::string existedFile = "../../test_data/OsPath/file";
 
   ASSERT_TRUE(OsPath::isFile(existedFile));
 }
