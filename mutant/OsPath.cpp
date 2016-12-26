@@ -59,11 +59,11 @@ bool OsPath::isDir(std::string const& path) {
 }
 
 
-std::vector<std::string>&& OsPath::ls(std::string const& path) {
+std::vector<std::string> OsPath::ls(std::string const& path) {
   std::vector<std::string> names;
 
   DIR* dir = opendir(path.data());
-  if (dir == nullptr) return std::move(names);
+  if (dir == nullptr) return names;
 
   struct dirent* cur;
 
@@ -73,5 +73,5 @@ std::vector<std::string>&& OsPath::ls(std::string const& path) {
 
   closedir(dir);
 
-  return std::move(names);
+  return names;
 }

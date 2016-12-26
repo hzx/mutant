@@ -107,7 +107,7 @@ TEST(OsPathTest, isFile) {
 TEST(OsPathTest, ls) {
   std::string path = "../../test_data/OsPath/ls";
 
-  std::vector<std::string> expected = { "dir1", "dir2", "file1.txt", "file2.txt" };
+  std::vector<std::string> expected = { ".", "..", "dir1", "dir2", "file1.txt", "file2.txt" };
   std::vector<std::string> actual = OsPath::ls(path);
 
   ASSERT_EQ(expected, actual);
