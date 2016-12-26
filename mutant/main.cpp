@@ -1,9 +1,10 @@
 #include <iostream>
-#include "Compiler.h"
+
+#include "App.h"
 
 
 int main(int argc, const char *argv[]) {
-  Compiler compiler;
+  App app;
 
-  return 0;
+  return app.run();
 }
