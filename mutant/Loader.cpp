@@ -19,12 +19,12 @@ int loadStyleModule(StyleModule& module, std::string const& path) {
 }
 
 
-std::vector<std::string>&& Loader::findModulePaths(std::vector<std::string> const& names) {
+std::vector<std::string> Loader::findModulePaths(std::vector<std::string> const& names) {
   assert(project != nullptr);
 
   std::vector<std::string> paths;
 
-  if (names.empty()) return std::move(paths);
+  if (names.empty()) return paths;
 
   std::string module = OsPath::join(names);
 
@@ -35,7 +35,7 @@ std::vector<std::string>&& Loader::findModulePaths(std::vector<std::string> cons
       if (!full.empty() && OsPath::exists(full)) paths.push_back(full);
     });
 
-  return std::move(paths);
+  return paths;
 }
 
 
