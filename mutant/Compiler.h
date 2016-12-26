@@ -14,5 +14,7 @@ public:
   Lexer lexer;
   Parser parser;
   Analyzer analyzer;
+
+  int compile(Build& build, Project& project);
 private:
 };
