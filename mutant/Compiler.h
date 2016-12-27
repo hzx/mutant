@@ -7,7 +7,9 @@
 #include "Parser.h"
 #include "Analyzer.h"
 #include "JsFormatter.h"
+#include "JsStyleFormatter.h"
 #include "CppFormatter.h"
+#include "CppStyleFormatter.h"
 
 
 class Compiler {
@@ -18,7 +20,9 @@ public:
   Analyzer analyzer;
   ObjSerializer serializer;
   JsFormatter jsFormatter;
+  JsStyleFormatter jsStyleFormatter;
   CppFormatter cppFormatter;
+  CppStyleFormatter cppStyleFormatter;
 
   int compile(Build& build, Project& project);
 private:
