@@ -13,6 +13,7 @@ int Compiler::compile(Build& build, Project& project) {
   // lexer
   // parser
   // analyzer
+  // obj serializer
   // formatter
 
   return ERROR_OK;
