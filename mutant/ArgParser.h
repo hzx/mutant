@@ -5,4 +5,5 @@
 
 class ArgParser {
 public:
+  int parse(Options& options, int argc, const char *argv[]);
 };
