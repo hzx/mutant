@@ -1,5 +1,15 @@
+export HOME
+
 CC = clang++
 OPT += -Wall -O2 -std=c++14
+
+# DEBUG
+ifeq (@(DEBUG),1)
+# RELEASE
+else
+  # set flag NDEBUG to disable assert
+  CFLAGS += -DNDEBUG=""
+endif
 
 CFLAGS += -I/usr/local/include\
 -I$(TUP_CWD)
