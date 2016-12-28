@@ -3,9 +3,12 @@
 #include "Project.h"
 #include "Build.h"
 #include "Loader.h"
+#include "Preprocessor.h"
 #include "Lexer.h"
 #include "Parser.h"
 #include "Analyzer.h"
+#include "ObjSerializer.h"
+#include "Compiler.h"
 #include "JsFormatter.h"
 #include "JsStyleFormatter.h"
 #include "CppFormatter.h"
@@ -15,6 +18,7 @@
 class Compiler {
 public:
   Loader loader;
+  Preprocessor preprocessor;
   Lexer lexer;
   Parser parser;
   Analyzer analyzer;

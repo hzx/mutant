@@ -10,6 +10,7 @@ int Compiler::compile(Build& build, Project& project) {
   // separately).
 
   // loader
+  // preprocessor
   // lexer
   // parser
   // analyzer
