@@ -15,16 +15,22 @@
 
 
 int const ERROR_OK = 0;
+int const ERROR_NOT_IMPLEMENTED = -1;
 
+/* 1000 - app */
 
-/* 1000 - loader */
+int const APP_CONFIG_NOT_EXISTS = -1001;
 
-/* 2000 - preprocessor */
+/* 2000 - compiler */
 
-/* 3000 - lexer */
+/* 3000 - loader */
 
-/* 4000 - parser */
+/* 4000 - preprocessor */
 
-/* 5000 - analyzer */
+/* 5000 - lexer */
 
-/* 6000 - formatter */
+/* 6000 - parser */
+
+/* 7000 - analyzer */
+
+/* 8000 - formatter */
