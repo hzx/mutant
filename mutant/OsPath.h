@@ -15,4 +15,5 @@ public:
   static bool isDir(std::string const& path);
   // return path list of filenames (dirs, links, files, ...)
   static std::vector<std::string> ls(std::string const& path);
+  static std::string load(std::string const& path);
 };

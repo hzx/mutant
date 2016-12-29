@@ -75,3 +75,13 @@ std::vector<std::string> OsPath::ls(std::string const& path) {
 
   return names;
 }
+
+
+std::string OsPath::load(std::string const& path) {
+  std::ostringstream buf;
+  std::ifstream file(path);
+
+  buf << file.rdbuf();
+
+  return buf.str();
+}
