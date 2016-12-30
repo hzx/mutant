@@ -34,3 +34,8 @@ int const APP_CONFIG_NOT_EXISTS = -1001;
 /* 7000 - analyzer */
 
 /* 8000 - formatter */
+
+
+bool isError(int error) {
+  return error < ERROR_OK;
+}
