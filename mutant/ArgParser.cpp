@@ -23,3 +23,7 @@ int ArgParser::parse(Options& options, int argc, const char *argv[]) {
 
   return ERROR_OK;
 }
+
+
+std::string ArgParser::extractPath(std::string const& value, size_t begin, size_t end) {
+}
