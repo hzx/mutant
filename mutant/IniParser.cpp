@@ -24,7 +24,7 @@ int IniParser::parse(Config& config, std::string const& content) {
       pos = end;
     }
 
-    error = parseLine(content, left, pos);
+    error = parseLine(config, content, left, pos);
     if (isError(error)) return error;
 
     left = pos + 1;
