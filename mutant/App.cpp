@@ -30,7 +30,7 @@ int App::initConfig() {
   int error = loadConfig(content);
   if (error < ERROR_OK) return error;
 
-  return iniParser(config, content);
+  return iniParser.parse(config, content);
 }
 
 
