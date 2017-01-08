@@ -11,10 +11,10 @@ int main(int argc, const char *argv[]) {
   int error;
 
   error = app.initOptions(argc, argv);
-  if (error < ERROR_OK) return error;
+  if (isError(error)) return error;
 
   error = app.initConfig();
-  if (error < ERROR_OK) return error;
+  if (isError(error)) return error;
 
   return app.run();
 }
