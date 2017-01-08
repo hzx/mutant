@@ -54,13 +54,3 @@ bar = 12.3
   ConfigGroup& watch = watchIt->second;
   ASSERT_EQ(1, watch.settings.size());
 }
-
-
-TEST_F(IniParserTest, extractGroupName) {
-  std::string content = " [some-group] ";
-  std::string expected = "some-group";
-
-  std::string name = IniParser::extractGroupName(content, 0, content.length());
-
-  ASSERT_EQ(expected, name);
-}
