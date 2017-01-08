@@ -35,3 +35,30 @@ std::string StringUtil::extract(std::string const& content, size_t begin, size_t
 
   return content.substr(left, right - left);
 }
+
+
+std::vector<std::string> StringUtil::parseArgs(std::string const& content, size_t begin, size_t end) {
+  std::vector<std::string> args;
+
+  size_t left = begin;
+  size_t right;
+
+  // left - find first non-space symbol
+  // right - find first space symbol
+  while (left < end) {
+    left = StringUtil::find(content, left, end, [](char c) {
+      return c != ' ';
+    });
+
+    right = StringUtil::find(content, left + 1, end, [](char c) {
+      return c == ' ';
+    });
+
+    std::string arg = content.substr(left, right - left);
+    if (!arg.empty()) args.push_back(arg);
+
+    left = right; // move to the space
+  }
+
+  return args;
+}
