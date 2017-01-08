@@ -4,10 +4,12 @@
 #include <vector>
 #include <map>
 
+#include "ProjectTarget.h"
+
 
 class Project {
 public:
   std::string path;
   std::vector<std::string> repositories;
-  std::map<std::string, std::string> targets;
+  std::vector<ProjectTarget> targets;
 };
