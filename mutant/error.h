@@ -16,6 +16,8 @@
 
 int const ERROR_OK = 0;
 int const ERROR_NOT_IMPLEMENTED = -1;
+int const ERROR_INI_NO_CLOSE_BRACKET = -101;
+int const ERROR_INI_NO_GROUP_FOR_VALUE = -102;
 
 /* 1000 - app */
 
