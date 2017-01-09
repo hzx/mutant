@@ -62,3 +62,27 @@ std::vector<std::string> StringUtil::parseArgs(std::string const& content, size_
 
   return args;
 }
+
+
+std::vector<std::string> StringUtil::split(std::string const& content, char delimiter) {
+  std::vector<std::string> parts;
+
+  size_t left = 0;
+  size_t end = content.size();
+  size_t delim;
+
+  // find delimiter
+  while (left < end) {
+    delim = content.find(delimiter, left);
+    if (delim == std::string::npos) { // not found
+      delim = end;
+    }
+
+    std::string part = content.substr(left, delim - left);
+    if (!part.empty()) parts.push_back(part);
+
+    left = delim + 1;
+  }
+
+  return parts;
+}

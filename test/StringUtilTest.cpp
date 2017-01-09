@@ -48,3 +48,13 @@ TEST(StringUtilTest, parseArgs) {
 
   ASSERT_EQ(expected, actual);
 }
+
+
+TEST(StringUtilTest, split) {
+  std::string content = "foo.bar.name";
+  std::vector<std::string> expected = { "foo", "bar", "name" };
+
+  std::vector<std::string> actual = StringUtil::split(content, '.');
+
+  ASSERT_EQ(expected, actual);
+}
