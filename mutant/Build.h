@@ -1,6 +1,11 @@
 #pragma once
 
+#include <vector>
+#include <string>
+
 #include "Project.h"
+#include "CodeModule.h"
+#include "StyleModule.h"
 
 
 /**
@@ -8,5 +13,6 @@
  */
 class Build {
 public:
-private:
+  std::string path;
+  std::vector<BaseModule> modules;
 };
