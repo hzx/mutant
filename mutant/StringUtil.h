@@ -12,4 +12,6 @@ public:
   static std::string extract(std::string const& content, size_t begin, size_t end);
   static std::vector<std::string> parseArgs(std::string const& content, size_t begin, size_t end);
   static std::vector<std::string> split(std::string const& content, char delimiter);
+  // skip spaces in the beginning
+  static size_t startWithSkipSpaces(std::string const& content, size_t begin, size_t end, std::string const& with);
 };

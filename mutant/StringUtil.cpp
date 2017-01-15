@@ -86,3 +86,18 @@ std::vector<std::string> StringUtil::split(std::string const& content, char deli
 
   return parts;
 }
+
+
+size_t StringUtil::startWithSkipSpaces(std::string const& content, size_t begin, size_t end, std::string const& with) {
+  // find first non space symbol
+  size_t nonSpace = StringUtil::find(content, begin, end, [](char c) {
+    return c != ' ';
+  });
+
+  // non space symbols not found or not enough space in content to compare
+  if (nonSpace == end || with.size() < end - nonSpace) return false;
+
+  if (content.compare(nonSpace, with.size(), with) == 0) return nonSpace;
+
+  return end;
+}
